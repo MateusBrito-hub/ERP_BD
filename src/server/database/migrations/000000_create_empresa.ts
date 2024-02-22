@@ -6,7 +6,7 @@ export async function up(knex: Knex){
 	return knex
 		.schema
 		.createTable(ETableNames.empresa, table => {
-			table.bigIncrements().primary().index();
+			table.bigIncrements('id').primary().index();
 			table.string('unidade').notNullable().index().unique();
 			table.string('nome_fantasia').notNullable().index();
 			table.enu('regime_tributario',['Simples Nacional', 'MEI', 'Normal']).defaultTo('MEI');

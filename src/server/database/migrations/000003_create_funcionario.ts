@@ -6,7 +6,7 @@ export async function up(knex: Knex){
 	return knex
 		.schema
 		.createTable(ETableNames.funcionario, table => {
-			table.bigIncrements().primary().index();
+			table.bigIncrements('id').primary().index();
 			table.string('nome').notNullable().index();
 			table.string('senha').notNullable().index();
 			table.integer('cpf').notNullable();
