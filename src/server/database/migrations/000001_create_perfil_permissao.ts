@@ -12,7 +12,7 @@ export async function up(knex: Knex){
 			table.boolean('habilitado').notNullable;
 			table.timestamps(true,true);
 
-			table.comment('Tabela usada para armazenar informação de Perfil');
+			table.comment('Tabela usada para armazenar informação de Perfil_permissao');
 		});
 }
 
