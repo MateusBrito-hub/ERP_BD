@@ -1,0 +1,22 @@
+export interface Icliente {
+    id: number,
+    nome: string,
+    razao_social: string,
+    cgc: number,
+    rg: number,
+    nasc_data: Date,
+    contato: number,
+    email: string,
+    tipo_contribuicao: Enumerator,
+    inscricao_estadual: number,
+    inscricao_municipal: number,
+    endereco: string,
+    endereco_num: number,
+    complemento: string,
+    cep: number,
+    bairro: string,
+    cidade: string,
+    uf: string,
+    pais: string,
+    vendedor_id: number
+}
