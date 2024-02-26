@@ -6,5 +6,6 @@ export enum ETableNames {
 	funcao = 'funcao',
 	permissao = 'permissao',
 	perfil_permissao = 'perfil_permissao',
+	cliente = 'cliente',
 }
 
