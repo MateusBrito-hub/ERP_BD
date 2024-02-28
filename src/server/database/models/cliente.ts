@@ -1,4 +1,4 @@
-export interface Icliente {
+export interface ICliente {
     id: number,
     nome: string,
     razao_social: string,
