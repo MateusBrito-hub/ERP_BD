@@ -25,7 +25,7 @@ export async function up(knex: Knex){
 			table.string('cidade').notNullable();
 			table.string('uf').notNullable();
 			table.string('pais').notNullable();
-			table.integer('vendedor_id').notNullable().references('id').inTable(ETableNames.funcionario).onUpdate('CASCADE').onDelete('RESTRICT');
+			table.bigInteger('vendedor_id').notNullable().references('id').inTable(ETableNames.funcionario).onUpdate('CASCADE').onDelete('RESTRICT');
 			table.timestamps(true,true);
 
 			table.comment('Tabela usada para armazenar informação de Função');
