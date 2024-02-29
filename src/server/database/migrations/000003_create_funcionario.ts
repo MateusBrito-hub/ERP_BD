@@ -21,7 +21,7 @@ export async function up(knex: Knex){
 			table.string('bairro').notNullable();
 			table.string('cidade').notNullable();
 			table.string('UF').notNullable();
-			table.integer('CEP').notNullable().checkLength('=',8);
+			table.integer('CEP').notNullable();
 			table.bigInteger('empresa_id').index().notNullable().references('id').inTable(ETableNames.empresa).onUpdate('CASCADE').onDelete('RESTRICT');
 			table.timestamps(true,true);
 

@@ -7,7 +7,7 @@ export async function up(knex: Knex){
 		.schema
 		.createTable(ETableNames.cliente, table => {
 			table.bigIncrements('id').primary().index();
-		    table.integer('nome').notNullable().index();
+			table.integer('nome').notNullable().index();
 			table.string('razao_social').notNullable().index();
 			table.integer('cgc').notNullable();
 			table.integer('rg');

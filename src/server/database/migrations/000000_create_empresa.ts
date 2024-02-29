@@ -14,13 +14,13 @@ export async function up(knex: Knex){
 			table.bigInteger('inscricao_estadual_ST');
 			table.bigInteger('inscricao_municipal');
 			table.string('email', 100);
-			table.integer('contato').notNullable().checkLength('>=', 9);
+			table.integer('contato').notNullable();
 			table.string('endereco').notNullable();
 			table.string('endereco_num').notNullable();
 			table.string('bairro').notNullable();
 			table.string('cidade').notNullable();
 			table.string('UF').notNullable();
-			table.integer('CEP').notNullable().checkLength('=',8);
+			table.integer('CEP').notNullable();
 			table.timestamps(true,true);
 
 			table.comment('Tabela usada para armazenar informação de Empresa');
