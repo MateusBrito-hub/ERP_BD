@@ -14,7 +14,7 @@ export async function up(knex: Knex){
 			table.date('nasc_data');
 			table.integer('contato').notNullable();
 			table.string('email', 100);
-			table.enu('tipo_contribuicao',['Contribuinte','Não Contribuinte', 'Isento' ]).notNullable();
+			table.string('tipo_contribuicao').notNullable();
 			table.integer('inscricao_estadual');
 			table.integer('inscricao_municipal');
 			table .string('endereco').notNullable();
