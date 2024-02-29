@@ -15,7 +15,7 @@ export async function up(knex: Knex){
 			table.integer('data_nasc');
 			table.text('observacao');
 			table.integer('comissao').defaultTo(0);
-			table.integer('desconto_max').defaultTo(0);
+			table.decimal('desconto_max').defaultTo(0);
 			table.string('endereco').notNullable();
 			table.string('endereco_num').notNullable();
 			table.string('bairro').notNullable();
@@ -25,7 +25,7 @@ export async function up(knex: Knex){
 			table.bigInteger('empresa_id').index().notNullable().references('id').inTable(ETableNames.empresa).onUpdate('CASCADE').onDelete('RESTRICT');
 			table.timestamps(true,true);
 
-			table.comment('Tabela usada para armazenar informação de Empresa');
+			table.comment('Tabela usada para armazenar informação de Funcionario');
 		});
 }
 

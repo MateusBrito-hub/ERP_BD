@@ -9,6 +9,7 @@ export async function up(knex: Knex){
 			table.bigIncrements('id').primary().index();
 			table.string('nome').notNullable().index().unique();
 			table.timestamps(true,true);
+			
 			table.comment('Tabela usada para armazenar informação de Perfil');
 		});
 }

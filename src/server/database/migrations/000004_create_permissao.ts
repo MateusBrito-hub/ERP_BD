@@ -12,7 +12,7 @@ export async function up(knex: Knex){
 			table.string('modulo_grupo').notNullable();
 			table.timestamps(true,true);
 
-			table.comment('Tabela usada para armazenar informação de permissoes');
+			table.comment('Tabela usada para armazenar informação de Permissoes');
 		});
 }
 
