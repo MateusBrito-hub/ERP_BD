@@ -8,7 +8,9 @@ export async function up(knex: Knex){
 		.createTable(ETableNames.empresa, table => {
 			table.bigIncrements('id').primary().index();
 			table.string('unidade').notNullable().index().unique();
+			table.integer('CGC').notNullable().index().unique();
 			table.string('nome_fantasia').notNullable().index();
+			table.string('razao_social').notNullable().index();
 			table.enu('regime_tributario',['Simples Nacional', 'MEI', 'Normal']).defaultTo('MEI');
 			table.bigInteger('inscricao_estadual');
 			table.bigInteger('inscricao_estadual_ST');

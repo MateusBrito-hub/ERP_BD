@@ -10,7 +10,6 @@ export const create = async (empresa: Omit<IEmpresa, 'id'>): Promise<number | Er
 		} else if (typeof result === 'number') {
 			return result;
 		}
-
 		return new Error('Error saving record');
 	} catch (err) {
 		return new Error('Error saving record');

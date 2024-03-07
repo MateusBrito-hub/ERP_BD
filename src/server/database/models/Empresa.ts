@@ -4,7 +4,7 @@ export interface IEmpresa {
 	unidade: string,
 	nome_fantasia: string,
 	razao_social: string,
-	cnpj: number,
+	CGC: number,
 	regime_tributario: string,
 	inscricao_estadual: number,
 	inscricao_estadual_ST: number,

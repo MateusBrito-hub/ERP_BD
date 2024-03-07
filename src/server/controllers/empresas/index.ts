@@ -1,6 +1,7 @@
 import * as create from './Create';
 
 
-export const FuncionarioProvider = {
+export const EmpresaController = {
 	...create
 };
+
