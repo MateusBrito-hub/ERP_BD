@@ -7,9 +7,9 @@ import * as deleteById from './DeleteById';
 
 export const EmpresaProvider = {
 	...count,
-    ...create,
-    ...getAll,
-    ...getById,
-    ...UpdateById,
-    ...deleteById
+	...create,
+	...getAll,
+	...getById,
+	...UpdateById,
+	...deleteById
 };
