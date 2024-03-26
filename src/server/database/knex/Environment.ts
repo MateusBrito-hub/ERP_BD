@@ -4,21 +4,22 @@ import path from 'path';
 
 
 export const development: Knex.Config = {
-	client: 'pg',
+	client: 'sqlite3',
+	useNullAsDefault: true,
 	connection: {
-		host: 'db-postgresql-nyc3-48659-do-user-15313263-0.c.db.ondigitalocean.com',
-		user: 'doadmin',
-		database: 'erp',
-		password: 'AVNS_ftXO8hycYFwSULXvO-t',
-		port: 25060,
-		ssl: { rejectUnauthorized:false },
+		filename: path.resolve(__dirname ,'..','..','..','..', 'database.sqlite')
 	},
 	migrations: {
-		tableName: 'knex_migrations',
 		directory: path.resolve(__dirname, '..', 'migrations')
 	},
 	seeds: {
 		directory: path.resolve(__dirname, '..', 'seeds')
+	},
+	pool: {
+		afterCreate: (connection: any, done: Function) => {
+			connection.run('PRAGMA foreign_keys = ON');
+			done();
+		}
 	}
 };
 
