@@ -3,7 +3,7 @@ import * as yup from 'yup';
 import { validation } from '../../shared/middlewares';
 import { StatusCodes } from 'http-status-codes';
 import { IEmpresa } from '../../database/models';
-import { EmpresaProvider } from '../../database/providers/empresas';
+import { EmpresaProvider } from '../../database/providers/empresa';
 
 interface IParamsProps {
     id?: number,
