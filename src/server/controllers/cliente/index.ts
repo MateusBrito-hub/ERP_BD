@@ -5,7 +5,7 @@ import * as UpdateById from './UpdateById';
 import * as deleteById from './DeleteById';
 
 
-export const FuncionarioController = {
+export const ClienteController = {
 	...create,
 	...getAll,
 	...getById,
