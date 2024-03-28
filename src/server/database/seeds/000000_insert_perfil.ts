@@ -1,8 +1,6 @@
 import { Knex } from 'knex';
 import { ETableNames } from '../ETableNames';
 
-
-
 export const seed = async (knex: Knex) => {
 	const [{ count }] = await knex(ETableNames.perfil).count<[{ count: number }]>('* as count');
 	if (Number(count) == 0) {
