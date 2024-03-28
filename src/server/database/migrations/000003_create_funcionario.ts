@@ -23,6 +23,8 @@ export async function up(knex: Knex){
 			table.string('UF').notNullable();
 			table.integer('CEP').notNullable();
 			table.bigInteger('empresa_id').index().notNullable().references('id').inTable(ETableNames.empresa).onUpdate('CASCADE').onDelete('RESTRICT');
+			table.bigInteger('funcao_id').index().notNullable().references('id').inTable(ETableNames.funcao).onUpdate('CASCADE').onDelete('RESTRICT');
+			table.bigInteger('perfil_id').index().notNullable().references('id').inTable(ETableNames.perfil).onUpdate('CASCADE').onDelete('RESTRICT');
 			table.timestamps(true,true);
 
 			table.comment('Tabela usada para armazenar informação de Funcionario');

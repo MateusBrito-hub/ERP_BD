@@ -14,11 +14,11 @@ export async function up(knex: Knex){
 			table.date('nasc_data');
 			table.integer('contato').notNullable();
 			table.string('email', 100);
-			table.string('tipo_contribuicao').notNullable();
+			table.integer('tipo_contribuicao').notNullable();
 			table.integer('inscricao_estadual');
 			table.integer('inscricao_municipal');
-			table .string('endereco').notNullable();
-			table.integer('edereco_num').notNullable();
+			table.string('endereco').notNullable();
+			table.integer('endereco_num').notNullable();
 			table.string('complemento');
 			table.integer('cep', 8).notNullable();
 			table.string('bairro').notNullable();
