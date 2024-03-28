@@ -1,11 +1,11 @@
 import { ETableNames } from '../../ETableNames';
 import { Knex } from '../../knex';
-import { IEmpresa } from '../../models';
+import { IFuncao } from '../../models';
 
-export const updateById = async (id: number, empresa: Omit<IEmpresa,'id'>) : Promise<void | Error> => {
+export const updateById = async (id: number, funcao: Omit<IFuncao,'id'>) : Promise<void | Error> => {
 	try {
-		const result = await Knex(ETableNames.empresa)
-			.update(empresa)
+		const result = await Knex(ETableNames.funcao)
+			.update(funcao)
 			.where('id', '=', id);
 		if (result > 0) return;
 		return new Error('Erro ao atualizar o registro');
